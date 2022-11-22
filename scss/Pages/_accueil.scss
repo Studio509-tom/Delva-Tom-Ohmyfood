@@ -1,0 +1,269 @@
+
+#body{  
+    z-index: 2;   
+    .chargement{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        z-index: 5;
+        background-color: rgba(255, 255, 255, 0.329);
+        animation: stop 3s linear forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+    display: flex;
+    position: fixed;
+    }
+
+    .dash {
+    margin: 0 15px;
+    width: 35px;
+    height: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0.25turn, #9356DC,#FF79DA);
+    box-shadow: 0 0 10px 0 #FECDFF;
+    position: relative;
+        
+    }
+
+    .un {
+    margin-right: -18px;
+    transform-origin: center left;
+    animation: spin 3s linear infinite;  
+    }
+
+    .deux {
+    transform-origin: center right;
+    animation: spin2 3s linear infinite;
+    animation-delay: .2s;
+    }
+
+    .trois {
+    transform-origin: center right;
+    animation: spin3 3s linear infinite;
+    animation-delay: .3s;
+    }
+
+    .quatre {
+    transform-origin: center right;
+    animation: spin4 3s linear infinite;
+    animation-delay: .4s;
+    }
+
+    @include chargement;
+    
+   
+    #page{
+        main{
+            .main-accueil{
+                
+                .block-fonctionnement{
+                    background-color: white;
+                    padding: 15px;
+                    .fonctionnement{
+                        .sous-fonctionnement{
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            font-size: 19px;
+                            box-shadow: 0 1px 4px grey;
+                            border-radius: 20px;
+                            position: relative;
+                            margin: 25px 15px;
+                            background-color: whitesmoke;
+                            .rond{
+                                border-radius: 50%;
+                                color: white;
+                                background-color: $color-primary;
+                                position: absolute;
+                                top: 25%;
+                                left: -15px;
+                                padding: 5px 12px 9px;
+                            }
+                            i{
+                                color: grey;
+                            }
+                            p{
+                                width: 65%;
+                            }
+                        }
+                        
+                    }
+                }
+                .main-restaurant{
+                    padding: 15px;
+                    .restaurants{
+                        
+                            .block-restaurant{
+                                border-radius: 20px;
+                                overflow: hidden;
+                                box-shadow: 0 1px 4px grey;
+                                margin: 20px 0;
+                                
+                                .top-block{
+                                    overflow: hidden;
+                                    max-height: 200px;
+                                    position: relative;
+                                    img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        margin-top: -100px;
+                                    }
+                                    .new{
+                                        background-color:$color-tertiary ;
+                                        position: absolute;
+                                        color: green;
+                                        padding: 5px 10px;
+                                        right: 30px;
+                                    }
+                                }
+                                .bottom-block{
+                                    justify-content: space-between;
+                                    display: flex;
+                                    .text-restaurant{
+                                        margin-left: 10px;
+                                    }
+                                    @include btn-like;
+                                    
+                                }
+                            }
+                        }
+                    }  
+                } 
+            } 
+        } 
+    }
+    .page-accueil{
+        animation: load 3s linear;
+    }
+
+    
+
+@media screen and (min-width: 768px) {
+#body{
+    #page{
+        max-width: 100%;
+        main{
+            .main-accueil{
+                .block-fonctionnement{
+                    .fonctionnement{
+                        display: flex;
+                        justify-content: space-around;
+                        .sous-fonctionnement{
+                            flex-direction: column;
+                            text-align: center;
+                            width: 100%;
+                            padding: 15px;
+                            .rond{
+                                top: 85%;
+                                left: auto;
+                            }
+                            i{
+                                margin-top: 15px;
+                            }
+                            
+                        }
+                    }
+                }
+                .main-restaurant{
+                    .restaurants{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        .block-restaurant{
+                            width: 45%;
+                            
+                            .top-block{
+                                position: relative;
+                                max-height: 160px;
+                                img{
+                                    margin-top: -50px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1025px)  {
+#body{    
+    #page{
+        main{
+            .main-accueil{
+                padding: 15px ;
+                margin: 0px 10%;
+                text-align: center;
+                h2{
+                    font-size: 40px;
+                }
+                .block-fonctionnement{
+                    background-color: rgb(223, 223, 223);
+                    padding: 0px;
+                    .fonctionnement{
+                        .sous-fonctionnement{
+                            
+                            width: 100%;
+                            padding: 15px;
+                            .rond{
+                                font-size: 50px;
+                                padding: 10px 30px 20px 30px;
+                                top: -45px;
+                            }
+                            i{
+                                font-size: 40px;
+                                margin-top: 70px;
+                            }
+                            p{
+                                font-size: 35px;
+                            }
+                        }
+                        
+                    }
+                }
+                .main-restaurant{
+                    .restaurants{
+                        flex-wrap:wrap;
+                        
+                        align-items: center;
+                        .block-restaurant{
+                            width: 45%;
+                            .top-block{
+                                max-height: 200px;
+                                position: relative;
+                            }
+                            .bottom-block{
+                                .text-restaurant{
+                                    font-size: 24px;
+                                    text-align: initial;
+                                    strong{
+                                        font-size: 26px;
+                                    }
+                                }
+                                .like{
+                                    font-size: 45px;
+                                    
+                                    &:active .heart-solid{
+                
+                                        width: 50px;
+                                        height: 50px;
+                                        transform :translate(-50%, -50%) scale(1, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+}

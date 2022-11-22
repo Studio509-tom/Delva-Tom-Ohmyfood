@@ -1,0 +1,163 @@
+.nav{
+    .nav-bar{
+        display: block;
+        text-align: center;
+        button{
+            position: absolute;
+            left: 5%;
+            top: 3%;
+            border: none;
+            background: none;
+            i{
+                font-size: 20px;
+            }
+        }
+        .logo{
+            width: 100%;
+            padding: 15px 0px;
+            box-shadow: 0 1px 4px grey;
+            img{
+                max-height: 30px; 
+            }
+        }
+        .bar-search{
+            padding: 15px 0;
+            background-color: $color-mediumlight;
+            i{
+                padding-right: 10px;
+            }
+            input{
+                border: none;
+                background-color: $color-mediumlight;
+                max-width: 100px;
+            }
+        }
+    }
+    .description{
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 30px 0px;
+        h1{
+            font-size: 24px;
+        }
+        .btn-primary{
+            @include btn-primary;
+        }   
+    }
+}
+@media screen and (min-width: 992px) {
+    .nav-accueil{
+        .nav-bar{
+            display: flex;
+            button{
+                position: absolute;
+                left: 5%;
+                top: 3%;
+                border: none;
+                background: none;
+                i{
+                    font-size: 20px;
+                }
+            }
+            .logo{
+                width: 80%;
+                padding: 15px 70px;
+                box-shadow: 0 1px 4px grey;
+                text-align: left;
+                img{
+                    max-height: 100px;
+                }
+            }
+            .bar-search{
+                padding: 15px 30px;;
+                width: 20%;
+                font-size: 40px;
+                background-color: $color-mediumlight;
+                box-shadow: 0 1px 4px grey;
+                i{
+                    padding-right: 10px;
+                }
+                input{
+                    border: none;
+                    background-color: $color-mediumlight;
+                    max-width: 75%;
+                    font-size: smaller;
+                }
+            }
+        }
+        .description{
+            text-align: center;
+            background-color: whitesmoke;
+            padding: 30px 0px;
+            h1{
+                font-size: 50px;
+            }
+            p{
+                font-size: 30px;
+            }
+            .btn-primary{
+                @include btn-primary;
+                font-size: 35px;
+                border-radius: 60px;
+            }   
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .nav-menu{
+        .nav-bar{
+            display: flex;
+            button{
+                position: absolute;
+                left: 5%;
+                top: 3%;
+                border: none;
+                background: none;
+                i{
+                    font-size:  45px;
+                }
+            }
+            .logo{
+                
+                padding: 15px 70px;
+                box-shadow: 0 1px 4px grey;
+                text-align: center;
+                img{
+                    max-height: 100px;
+                }
+            }
+            .bar-search{
+                padding: 15px 30px;;
+                width: 20%;
+                font-size: 40px;
+                background-color: $color-mediumlight;
+                box-shadow: 0 1px 4px grey;
+                i{
+                    padding-right: 10px;
+                }
+                input{
+                    border: none;
+                    background-color: $color-mediumlight;
+                    max-width: 75%;
+                    font-size: smaller;
+                }
+            }
+        }
+        .description{
+            text-align: center;
+            background-color: whitesmoke;
+            padding: 30px 0px;
+            h1{
+                font-size: 50px;
+            }
+            p{
+                font-size: 30px;
+            }
+            .btn-primary{
+                @include btn-primary;
+                font-size: 35px;
+                border-radius: 60px;
+            }   
+        }
+    }
+}
