@@ -2,7 +2,7 @@
     .nav-bar{
         display: block;
         text-align: center;
-        button{
+        .return{
             position: absolute;
             left: 5%;
             top: 3%;
@@ -49,14 +49,10 @@
     .nav-accueil{
         .nav-bar{
             display: flex;
-            button{
-                position: absolute;
-                left: 5%;
-                top: 3%;
-                border: none;
-                background: none;
+            .return{
+                
                 i{
-                    font-size: 20px;
+                    font-size: 45px;
                 }
             }
             .logo{
@@ -107,7 +103,7 @@
     .nav-menu{
         .nav-bar{
             display: flex;
-            button{
+            .return{
                 position: absolute;
                 left: 5%;
                 top: 3%;

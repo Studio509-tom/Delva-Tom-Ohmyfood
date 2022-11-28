@@ -2,14 +2,14 @@
   display: block;
   text-align: center;
 }
-.nav .nav-bar button {
+.nav .nav-bar .return {
   position: absolute;
   left: 5%;
   top: 3%;
   border: none;
   background: none;
 }
-.nav .nav-bar button i {
+.nav .nav-bar .return i {
   font-size: 20px;
 }
 .nav .nav-bar .logo {
@@ -53,15 +53,8 @@
   .nav-accueil .nav-bar {
     display: flex;
   }
-  .nav-accueil .nav-bar button {
-    position: absolute;
-    left: 5%;
-    top: 3%;
-    border: none;
-    background: none;
-  }
-  .nav-accueil .nav-bar button i {
-    font-size: 20px;
+  .nav-accueil .nav-bar .return i {
+    font-size: 45px;
   }
   .nav-accueil .nav-bar .logo {
     width: 80%;
@@ -114,14 +107,14 @@
   .nav-menu .nav-bar {
     display: flex;
   }
-  .nav-menu .nav-bar button {
+  .nav-menu .nav-bar .return {
     position: absolute;
     left: 5%;
     top: 3%;
     border: none;
     background: none;
   }
-  .nav-menu .nav-bar button i {
+  .nav-menu .nav-bar .return i {
     font-size: 45px;
   }
   .nav-menu .nav-bar .logo {
@@ -175,12 +168,16 @@ body {
   margin: 0;
 }
 body #page {
-  max-width: 100%;
+  width: 100%;
 }
 body #page a {
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+body #page h1 {
+  font-family: "Raleway", sans-serif;
+  font-family: "Shrikhand", cursive;
 }
 
 #body {
@@ -765,6 +762,11 @@ main .main-menu .selection {
 }
 main .main-menu .selection h2 {
   margin-left: 5%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: #99E2D0 solid 3px;
+  padding-bottom: 5px;
 }
 main .main-menu .selection .choix {
   display: flex;
@@ -804,6 +806,10 @@ main .main-menu .selection .choix .block-choix:nth-child(3n) {
 main .main-menu .selection .choix .block-choix:nth-child(4n) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+main .main-menu .selection .choix .block-choix:nth-child(5n) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 main .main-menu .selection .choix .block-choix i {
   font-size: 25px;
@@ -872,31 +878,16 @@ main .btn-commander .btn-primary {
     cursor: pointer;
     position: relative;
   }
-  main .main-menu .head-menu .like i {
+  main .main-menu .head-menu .like h1 {
+    margin-left: 5%;
     font-size: 40px;
-  }
-  main .main-menu .head-menu .like .heart-solid {
-    mask: url(../images/heart-solid.svg);
-    -webkit-mask: url(../images/heart-solid.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background: linear-gradient(#9356DC, #FF79DA);
-    transition: all ease-in 1s;
-    width: 0;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    transform: translate(-50%, -50%) scale(0, 0);
-    left: 50%;
-    top: 49%;
   }
   main .main-menu .head-menu .like:active .heart-solid {
     width: 45px;
     height: 45px;
-    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  main .main-menu .head-menu .like i {
+    font-size: 40px;
   }
   main .main-menu .selection {
     padding-top: 60px;
@@ -909,10 +900,10 @@ main .btn-commander .btn-primary {
     align-items: center;
     width: 100%;
   }
-  main .btn-commander {
+  .btn-commander {
     padding: 5% 0;
   }
-  main .btn-commander .btn-primary {
+  .btn-commander .btn-primary {
     font-size: 25px;
   }
 }
