@@ -47,6 +47,7 @@
   padding: 15px;
   color: white;
   font-size: 15px;
+  box-shadow: 0px 4px 9px grey;
 }
 
 @media screen and (min-width: 992px) {
@@ -99,8 +100,13 @@
     padding: 15px;
     color: white;
     font-size: 15px;
-    font-size: 35px;
+    box-shadow: 0px 4px 9px grey;
+    font-size: 20px;
     border-radius: 60px;
+    cursor: pointer;
+  }
+  .nav-accueil .description .btn-primary:hover {
+    background: linear-gradient(#ff91e0, #a66eeb);
   }
 }
 @media screen and (min-width: 992px) {
@@ -159,6 +165,7 @@
     padding: 15px;
     color: white;
     font-size: 15px;
+    box-shadow: 0px 4px 9px grey;
     font-size: 35px;
     border-radius: 60px;
   }
@@ -863,7 +870,12 @@ main .btn-commander .btn-primary {
   padding: 15px;
   color: white;
   font-size: 15px;
+  box-shadow: 0px 4px 9px grey;
   padding: 15px 40px;
+}
+main .btn-commander .btn-primary:hover {
+  background: linear-gradient(#ff91e0, #a66eeb);
+  box-shadow: 0px 4px 12px rgb(54, 54, 54);
 }
 
 @media screen and (min-width: 992px) {

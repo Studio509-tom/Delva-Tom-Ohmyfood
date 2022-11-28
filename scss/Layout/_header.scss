@@ -93,8 +93,12 @@
             }
             .btn-primary{
                 @include btn-primary;
-                font-size: 35px;
+                font-size: 20px;
                 border-radius: 60px;
+                cursor: pointer;
+                &:hover{
+                    background: linear-gradient(#ff91e0,#a66eeb);
+                  }
             }   
         }
     }

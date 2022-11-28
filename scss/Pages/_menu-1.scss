@@ -135,6 +135,10 @@
                 .btn-primary{
                     @include btn-primary;
                     padding: 15px 40px;
+                    &:hover{
+                        background: linear-gradient(#ff91e0,#a66eeb);
+                        box-shadow: 0px 4px 12px rgb(54, 54, 54);
+                      }
                 }
                     
                 
